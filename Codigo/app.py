@@ -1,2 +1,8 @@
 import streamlit as st
+
+st.title("Trabajo Práctico - Modulo Python Fundamentals")
+st.sidebar.title("Parámetros")
+st.write("Elaborado por: Bryan Abel Pineda Sulca")
+st.image("python_logo.png", width = 300)
+st.sidebar.image("DMC_logo.png",width = 100)
 modulos = st.sidebar.selectbox ("Secciones", ["Home", "Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"])
