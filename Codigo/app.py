@@ -9,15 +9,6 @@ modulos = st.sidebar.selectbox ("Secciones", ["Home", "Ejercicio 1","Ejercicio 2
 
 if modulos == "Home":
 
-    st.title("Trabajo Práctico - Módulo Python Fundamentals")
-
-    st.image("Logos/Python_Logo.png", width=150)
-
-    st.subheader("Bryan Abel Pineda Sulca")
-
-    st.write("Módulo: Python Fundamentals")
-
-    st.write("Año: 2026")
 
     st.markdown("---")
 
