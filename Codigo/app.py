@@ -20,6 +20,7 @@ if modulos == "Home":
     st.write("""
     Egresado de la Carrera de Psicología organizacional con experiencia en análisis de datos
     """)
+    st.subheader("2026")
 
     st.markdown("### Tecnologías Utilizadas")
     st.markdown("""
