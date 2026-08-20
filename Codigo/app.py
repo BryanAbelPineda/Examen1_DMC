@@ -3,7 +3,7 @@ import streamlit as st
 st.image("Logos/Python_Logo.png", width = 100)
 st.title("Especialización en Python  for Analytics ")
 st.sidebar.title("Menú")
-st.write("Elaborado por: Bryan Abel Pineda Sulca")
+st.write("Proyecto Academica")
 st.sidebar.image("Logos/DMC_logo.png",width = 200)
 modulos = st.sidebar.selectbox ("Secciones", ["Home", "Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"])
 
@@ -19,7 +19,7 @@ if modulos == "Home":
     solicitados utilizando Streamlit como herramienta de visualización.
     """)
 
-    st.markdown("### Descripción del Proyecto")
+    st.markdown("### Elaborado por: Bryan Abel Pineda Sulca")
     st.write("""
     El proyecto integra distintos ejercicios relacionados con
     programación en Python, manejo de datos y desarrollo de
