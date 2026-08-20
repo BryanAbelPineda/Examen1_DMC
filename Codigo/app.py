@@ -21,7 +21,9 @@ if modulos == "Home":
     Egresado de la Carrera de Psicología organizacional con experiencia en análisis de datos
     """)
     st.subheader("2026")
-
+    st.write("""
+    Desarrollo de una aplicación interactiva para analizar y visualizar información utilizando Python y Streamlit.
+    """
     st.markdown("### Tecnologías Utilizadas")
     st.markdown("""
     - Python
