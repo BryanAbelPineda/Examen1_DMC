@@ -13,11 +13,7 @@ if modulos == "Home":
     st.markdown("---")
 
     st.header("Módulo 1 – Fundamentos de Programación")
-    st.write("""
-    Esta aplicación corresponde al trabajo práctico del módulo
-    Python Fundamentals. Aquí se desarrollan los ejercicios
-    solicitados utilizando Streamlit como herramienta de visualización.
-    """)
+    st.image("Logos/Logo_Log.png", width = 50)
 
     st.markdown("### Elaborado por: Bryan Abel Pineda Sulca")
     st.write("""
