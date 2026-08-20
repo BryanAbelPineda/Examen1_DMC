@@ -12,7 +12,7 @@ if modulos == "Home":
 
     st.markdown("---")
 
-    st.markdown("### Información General")
+    st.markdown("Módulo 1 – Fundamentos de Programación")
     st.write("""
     Esta aplicación corresponde al trabajo práctico del módulo
     Python Fundamentals. Aquí se desarrollan los ejercicios
