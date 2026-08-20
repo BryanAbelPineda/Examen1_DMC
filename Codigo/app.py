@@ -13,12 +13,12 @@ if modulos == "Home":
     st.markdown("---")
 
     st.header("Módulo 1 – Fundamentos de Programación")
+    
     st.image("Logos/Logo_Log.png", width = 200)
+    
     st.markdown("### Elaborado por: Bryan Abel Pineda Sulca")
     st.write("""
-    El proyecto integra distintos ejercicios relacionados con
-    programación en Python, manejo de datos y desarrollo de
-    aplicaciones interactivas.
+    Egresado de la Carrera de Psicología organizacional con experiencia en análisis de datos
     """)
 
     st.markdown("### Tecnologías Utilizadas")
