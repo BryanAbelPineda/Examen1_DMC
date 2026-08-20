@@ -13,8 +13,7 @@ if modulos == "Home":
     st.markdown("---")
 
     st.header("Módulo 1 – Fundamentos de Programación")
-    st.image("Logos/Logo_Log.png", width = 100)
-
+    st.image("Logos/Logo_Log.png", width = 200)
     st.markdown("### Elaborado por: Bryan Abel Pineda Sulca")
     st.write("""
     El proyecto integra distintos ejercicios relacionados con
