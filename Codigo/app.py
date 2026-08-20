@@ -23,7 +23,7 @@ if modulos == "Home":
     st.subheader("2026")
     st.write("""
     Desarrollo de una aplicación interactiva para analizar y visualizar información utilizando Python y Streamlit.
-    """
+    """)
     st.markdown("### Tecnologías Utilizadas")
     st.markdown("""
     - Python
