@@ -48,9 +48,12 @@ elif modulos == "Ejercicio 1":
   ingresos=Movimientos[Movimientos["Tipo"]=="Ingreso"]["Valor"].sum()
   gasto   =Movimientos[Movimientos["Tipo"]=="Gasto"]["Valor"].sum()
   saldo   =ingresos-gasto
+
+    
   st.write("Ingresos: ",ingresos)
   st.write("Gastos: ",gasto)
   st.write("Saldo: ",saldo)
+  if saldo >=1 : st.write("Caja a favor") else: st.write("Caja en contra")  
 
 else:
 
