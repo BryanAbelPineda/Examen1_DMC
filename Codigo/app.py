@@ -38,12 +38,20 @@ elif modulos == "Ejercicio 1":
   concepto = st.text_input("Ingrese Concepto:")
   tipo = st.selectbox("Tipo de Movimiento",["Ingreso","Gasto"])
   valor=st.number_input("Ingrese Valor (s/)")
-  st.button("Agregar")
+  ##LISTAS
+  list_conceptos=[]
+  list_tipos=[]
+  list_valores=[]
+        if st.button("Agregar"):
+        
+            list_onceptos.append(concepto)
+            list_tipos.append(tipo)
+            list_valores.append(valor)
 
   Movimientos= pd.DataFrame({
-    "Concepto":["Lapiz","Papel","Pantalon"]
-    ,"Tipo":["Ingreso","Ingreso","Gasto"]
-    ,"Valor":[20,30,75]
+    "Concepto":list_conceptos
+    ,"Tipo":list_tipos
+    ,"Valor":list_valores
   }) 
   st.dataframe(Movimientos)
   ingresos=Movimientos[Movimientos["Tipo"]=="Ingreso"]["Valor"].sum()
