@@ -34,39 +34,42 @@ if modulos == "Home":
     - GitHub
     """)
 elif modulos == "Ejercicio 1":
-  st.write("1. FLUJO DE CAJA CON LISTAS")
-  concepto = st.text_input("Ingrese Concepto:")
-  tipo = st.selectbox("Tipo de Movimiento",["Ingreso","Gasto"])
-  valor=st.number_input("Ingrese Valor (s/)")
-  ##LISTAS
-  list_conceptos=[]
-  list_tipos=[]
-  list_valores=[]
-  if st.button("Agregar"):
-        
-    list_conceptos.append(concepto)
-    list_tipos.append(tipo)
-    list_valores.append(valor)
-
-  Movimientos= pd.DataFrame({
-    "Concepto":list_conceptos
-    ,"Tipo":list_tipos
-    ,"Valor":list_valores
-  }) 
-  st.dataframe(Movimientos)
-  ingresos=Movimientos[Movimientos["Tipo"]=="Ingreso"]["Valor"].sum()
-  gasto   =Movimientos[Movimientos["Tipo"]=="Gasto"]["Valor"].sum()
-  saldo   =ingresos-gasto
+      st.write("1. FLUJO DE CAJA CON LISTAS")
+    
+      list_conceptos=[]
+      list_tipos=[]
+      list_valores=[] 
 
     
-  st.write("Ingresos: ",ingresos)
-  st.write("Gastos: ",gasto)
-  st.write("Saldo: ",saldo)
-  
-  if saldo > 0 : 
-      st.write("Caja a favor") 
-  else: 
-      st.write("Caja en contra")  
+      concepto = st.text_input("Ingrese Concepto:")
+      tipo = st.selectbox("Tipo de Movimiento",["Ingreso","Gasto"])
+      valor=st.number_input("Ingrese Valor (s/)")
+
+      if st.button("Agregar"):
+            
+        list_conceptos.append(concepto)
+        list_tipos.append(tipo)
+        list_valores.append(valor)
+    
+      Movimientos= pd.DataFrame({
+        "Concepto":list_conceptos
+        ,"Tipo":list_tipos
+        ,"Valor":list_valores
+      }) 
+      st.dataframe(Movimientos)
+      ingresos=Movimientos[Movimientos["Tipo"]=="Ingreso"]["Valor"].sum()
+      gasto   =Movimientos[Movimientos["Tipo"]=="Gasto"]["Valor"].sum()
+      saldo   =ingresos-gasto
+    
+        
+      st.write("Ingresos: ",ingresos)
+      st.write("Gastos: ",gasto)
+      st.write("Saldo: ",saldo)
+      
+      if saldo > 0 : 
+          st.write("Caja a favor") 
+      else: 
+          st.write("Caja en contra")  
 
 else:
 
