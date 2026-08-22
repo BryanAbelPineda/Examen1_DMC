@@ -40,9 +40,9 @@ elif modulos == "Ejercicio 1":
   valor=st.number_input("Ingrese Valor (s/)")
 
   Movimientos= pd.DataFrame({
-    "Concepto"[""]
-    ,"Tipo" [""]
-    ,"Valor"[]
+    "Concepto":[]
+    ,"Tipo":[]
+    ,"Valor":[]
   }) 
     st.dataFrame(Movimientos)
 
