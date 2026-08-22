@@ -34,9 +34,9 @@ if modulos == "Home":
     """)
 elif modulos == "Ejercicio 1":
   st.write("1. FLUJO DE CAJA CON LISTAS")
-  nombre = st.text_input("Ingrese su nombre:")
-  if nombre:
-    st.write("Hola", nombre)
+  nombre = st.text_input("Ingrese Concepto:")
+  tipo_movimiento = st.selectbox("Tipo de Movimiento",["Ingreso","Gasto"])
+
 else:
 
   
