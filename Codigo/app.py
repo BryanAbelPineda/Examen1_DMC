@@ -75,8 +75,10 @@ elif modulos == "Ejercicio 1":
       if saldo > 0 : 
           st.write("Caja a favor") 
       else: 
-          st.write("Caja en contra")  
-
+          st.write("Caja en contra") 
+          
+elif modulos == "Ejercicio 2":
+      st.write("2. Registro con NumPy, arrays y DataFrame. ")
 else:
 
   
