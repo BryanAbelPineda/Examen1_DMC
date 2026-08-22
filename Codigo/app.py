@@ -33,10 +33,9 @@ if modulos == "Home":
     - GitHub
     """)
 elif modulos == "Ejercicio 1":
-  st.write("FLUJO DE CAJA CON LISTAS")
-  cantidad_elementos = st.slider("Selecione la cantidad de elementos de su arreglo", 1,100)
-  cantidad_arreglo= np.arange(cantidad_elementos)
-  st.write(cantidad_arreglo)
+  st.write("1. FLUJO DE CAJA CON LISTAS")
+  nombre = input("Ingrese su nombre: ")
+  print("Hola", nombre)
 else:
 
   
