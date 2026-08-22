@@ -44,7 +44,7 @@ elif modulos == "Ejercicio 1":
     ,"Tipo":[]
     ,"Valor":[]
   }) 
-  st.dataFrame(Movimientos)
+  st.dataframe(Movimientos)
 
 
 else:
