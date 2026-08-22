@@ -87,6 +87,8 @@ elif modulos == "Ejercicio 2":
 
       st.button("Añadir Registro")
       st.button("Limpiar Registros")
+
+      st.dataframe(Consolidado)
 else:
 
   
