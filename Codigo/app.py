@@ -77,7 +77,7 @@ elif modulos == "Ejercicio 1":
           st.write("Caja a favor") 
       else: 
           st.write("Caja en contra") 
-          
+#################################################################################    EJERCICIO 2   #################################################################################          
 elif modulos == "Ejercicio 2":
       st.write("2. REGISTRO CON NUMPY, ARRAYS Y DATAFRAME. ")
       st.header("Piloto Registro de Productos")
@@ -105,8 +105,14 @@ elif modulos == "Ejercicio 2":
           st.session_state.list_can=np.append(st.session_state.list_can,cantidad)
           st.session_state.list_pre=np.append(st.session_state.list_pre,precio)
           st.session_state.list_tot=np.append(st.session_state.list_tot,precio*cantidad)
-      st.button("Limpiar Registros")
-    
+     
+      if st.button("Limpiar Registros")
+          st.session_state.list_prod=np.array([])
+          st.session_state.list_can=np.array([])
+          st.session_state.list_cat=np.array([])
+          st.session_state.list_pre=np.array([])
+          st.session_state.list_tot=np.array([])
+  
       Consolidado= pd.DataFrame({
         "Producto":st.session_state.list_prod
         ,"Categoria":st.session_state.list_cat
