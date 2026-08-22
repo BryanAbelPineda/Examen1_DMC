@@ -106,7 +106,7 @@ elif modulos == "Ejercicio 2":
           st.session_state.list_pre=np.append(st.session_state.list_pre,precio)
           st.session_state.list_tot=np.append(st.session_state.list_tot,precio*cantidad)
      
-      if st.button("Limpiar Registros")
+      if st.button("Limpiar Registros"):
           st.session_state.list_prod=np.array([])
           st.session_state.list_can=np.array([])
           st.session_state.list_cat=np.array([])
