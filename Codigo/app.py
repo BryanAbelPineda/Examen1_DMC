@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.image("Logos/Python_Logo.png", width = 100)
 st.title("Especialización en Python  for Analytics ")
@@ -34,9 +35,17 @@ if modulos == "Home":
     """)
 elif modulos == "Ejercicio 1":
   st.write("1. FLUJO DE CAJA CON LISTAS")
-  nombre = st.text_input("Ingrese Concepto:")
-  tipo_movimiento = st.selectbox("Tipo de Movimiento",["Ingreso","Gasto"])
+  concepto = st.text_input("Ingrese Concepto:")
+  tipo = st.selectbox("Tipo de Movimiento",["Ingreso","Gasto"])
   valor=st.number_input("Ingrese Valor (s/)")
+
+  Movimientos= pd.DataFrame({
+    "Concepto"[""]
+    ,"Tipo" [""]
+    ,"Valor"[]
+  }) 
+    st.dataFrame(Movimientos)
+
 
 else:
 
