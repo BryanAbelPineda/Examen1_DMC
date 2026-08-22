@@ -38,6 +38,7 @@ elif modulos == "Ejercicio 1":
   concepto = st.text_input("Ingrese Concepto:")
   tipo = st.selectbox("Tipo de Movimiento",["Ingreso","Gasto"])
   valor=st.number_input("Ingrese Valor (s/)")
+  st.button("Agregar")
 
   Movimientos= pd.DataFrame({
     "Concepto":["Lapiz","Papel","Pantalon"]
