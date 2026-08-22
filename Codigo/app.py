@@ -78,7 +78,8 @@ elif modulos == "Ejercicio 1":
           st.write("Caja en contra") 
           
 elif modulos == "Ejercicio 2":
-      st.write("2. Registro con NumPy, arrays y DataFrame. ")
+      st.write("2. REGISTRO CON NUMPY, ARRAYS Y DATAFRAME. ")
+      st.title("Piloto Registro de Productos")
 else:
 
   
