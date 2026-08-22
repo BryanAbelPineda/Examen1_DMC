@@ -42,7 +42,7 @@ elif modulos == "Ejercicio 1":
   Movimientos= pd.DataFrame({
     "Concepto":["Lapiz","Papel","Pantalon"]
     ,"Tipo":["Ingreso","Ingreso","Gasto"]
-    ,"Valor":[20,30,15]
+    ,"Valor":[20,30,75]
   }) 
   st.dataframe(Movimientos)
   ingresos=Movimientos[Movimientos["Tipo"]=="Ingreso"]["Valor"].sum()
@@ -54,7 +54,7 @@ elif modulos == "Ejercicio 1":
   st.write("Gastos: ",gasto)
   st.write("Saldo: ",saldo)
   
-  if saldo >= 1 : 
+  if saldo > 0 : 
       st.write("Caja a favor") 
   else: 
       st.write("Caja en contra")  
