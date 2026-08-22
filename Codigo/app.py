@@ -84,6 +84,9 @@ elif modulos == "Ejercicio 2":
       categoria=st.selectbox("Categoria de Producto:",["Abarrotes","Bebidas","Limpieza","Electronica","Otros"])
       precio=st.number_input("Precio Unitario (S/.)")
       cantidad=st.number_input("Cantidad")
+
+     st.button("Añadir Registro")
+     st.button("Limpiar Registros")
 else:
 
   
