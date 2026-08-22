@@ -36,7 +36,7 @@ elif modulos == "Ejercicio 1":
   st.write("1. FLUJO DE CAJA CON LISTAS")
   nombre = st.text_input("Ingrese Concepto:")
   tipo_movimiento = st.selectbox("Tipo de Movimiento",["Ingreso","Gasto"])
-  valor=st.number_input("Ingrese Valor s/")
+  valor=st.number_input("Ingrese Valor (s/)")
 
 else:
 
