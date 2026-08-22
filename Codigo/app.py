@@ -80,6 +80,10 @@ elif modulos == "Ejercicio 1":
 elif modulos == "Ejercicio 2":
       st.write("2. REGISTRO CON NUMPY, ARRAYS Y DATAFRAME. ")
       st.header("Piloto Registro de Productos")
+      producto=st.text_input("Producto: ")
+      categoria=st.selectbox("Categoria de Producto:",["Abarrotes","Bebidas","Limpieza","Electronica","Otros"])
+      precio=st.number_input("Precio Unitario (S/.)")
+      cantidad=st.number_input("Cantidad")
 else:
 
   
