@@ -85,8 +85,8 @@ elif modulos == "Ejercicio 2":
       precio=st.number_input("Precio Unitario (S/.)")
       cantidad=st.number_input("Cantidad")
 
-     st.button("Añadir Registro")
-     st.button("Limpiar Registros")
+      st.button("Añadir Registro")
+      st.button("Limpiar Registros")
 else:
 
   
