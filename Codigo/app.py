@@ -34,7 +34,7 @@ if modulos == "Home":
     """)
 elif modulos == "Ejercicio 1":
   st.write("1. FLUJO DE CAJA CON LISTAS")
-  nombre = input("Ingrese su nombre: ")
+  nombre = st.text_input("Ingrese su nombre: ")
   print("Hola", nombre)
 else:
 
