@@ -44,7 +44,7 @@ elif modulos == "Ejercicio 1":
   list_valores=[]
   if st.button("Agregar"):
         
-    list_onceptos.append(concepto)
+    list_conceptos.append(concepto)
     list_tipos.append(tipo)
     list_valores.append(valor)
 
