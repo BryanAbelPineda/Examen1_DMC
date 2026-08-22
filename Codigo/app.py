@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 
 st.image("Logos/Python_Logo.png", width = 100)
 st.title("Especialización en Python  for Analytics ")
@@ -80,20 +81,38 @@ elif modulos == "Ejercicio 1":
 elif modulos == "Ejercicio 2":
       st.write("2. REGISTRO CON NUMPY, ARRAYS Y DATAFRAME. ")
       st.header("Piloto Registro de Productos")
+
+      if "list_prod" not in st.session_state:
+          st.session_state.list_prod=np.array([]) 
+      if "list_cat" not in st.session_state:
+          st.session_state.list_cat=np.array([])
+      if "list_can" not in st.session_state:
+          st.session_state.list_can=np.array([])
+      if "list_pre" not in st.session_state:
+         st.session_state.list_pre=np.array([])
+      if "list_tot" not in st.session_state:
+          st.session_state.list_tot=np.array([])
+          
       producto=st.text_input("Producto: ")
       categoria=st.selectbox("Categoria de Producto:",["Abarrotes","Bebidas","Limpieza","Electronica","Otros"])
       precio=st.number_input("Precio Unitario (S/.)")
       cantidad=st.number_input("Cantidad")
 
-      st.button("Añadir Registro")
+      if st.button("Añadir Registro"):
+
+          st.session_state.list_prod=np.append(st.session_state.list_prod,producto)
+          st.session_state.list_cat=np.append(st.session_state.list_cat,categoria)
+          st.session_state.list_can=np.append(st.session_state.list_can,cantidad)
+          st.session_state.list_pre=np.append(st.session_state.list_pre,precio)
+          st.session_state.list_tot=np.append(st.session_state.list_tot,precio*cantidad)
       st.button("Limpiar Registros")
-      
+    
       Consolidado= pd.DataFrame({
-        "Producto":[]
-        ,"Categoria":[]
-        ,"Cantidad":[]
-        ,"Precio":[]
-        ,"Total":[]
+        "Producto":st.session_state.list_prod
+        ,"Categoria":st.session_state.list_cat
+        ,"Cantidad":st.session_state.list_can
+        ,"Precio":st.session_state.list_pre
+        ,"Total":st.session_state.list_tot
       })
     
       st.dataframe(Consolidado)
