@@ -47,7 +47,8 @@ elif modulos == "Ejercicio 1":
   st.dataframe(Movimientos)
   ingresos=Movimientos[Movimientos["Tipo"]=="Ingreso"]["Valor"].sum()
   gasto   =Movimientos[Movimientos["Tipo"]=="Gasto"]["Valor"].sum()
-
+  st.write(ingresos)
+  st.write(gasto)
 
 else:
 
