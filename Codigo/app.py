@@ -87,7 +87,15 @@ elif modulos == "Ejercicio 2":
 
       st.button("Añadir Registro")
       st.button("Limpiar Registros")
-
+      
+      Consolidado= pd.DataFrame({
+        "Producto":[]
+        ,"Categoria":[]
+        ,"Cantidad":[]
+        ,"Precio":[]
+        ,"Total":[]
+      })
+    
       st.dataframe(Consolidado)
 else:
 
