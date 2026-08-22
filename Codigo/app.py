@@ -40,11 +40,13 @@ elif modulos == "Ejercicio 1":
   valor=st.number_input("Ingrese Valor (s/)")
 
   Movimientos= pd.DataFrame({
-    "Concepto":[]
-    ,"Tipo":[]
-    ,"Valor":[]
+    "Concepto":["Lapiz","Papel"]
+    ,"Tipo":["Ingreso","Ingreso"]
+    ,"Valor":[20,30]
   }) 
   st.dataframe(Movimientos)
+  ingresos=Movimientos[tipo=="Ingreso"].sunm()
+  gasto=Movimientos[tipo="Gasto"].sum()
 
 
 else:
