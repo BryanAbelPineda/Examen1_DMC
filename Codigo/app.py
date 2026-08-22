@@ -34,16 +34,16 @@ if modulos == "Home":
     - GitHub
     """)
 elif modulos == "Ejercicio 1":
-    st.write("1. FLUJO DE CAJA CON LISTAS")
+      st.write("1. FLUJO DE CAJA CON LISTAS")
     
 
-    if "list_conceptos" not in st.session_state:
+      if "list_conceptos" not in st.session_state:
         st.session_state.list_conceptos = []
 
-    if "list_tipos" not in st.session_state:
+      if "list_tipos" not in st.session_state:
         st.session_state.list_tipos = []
         
-    if "list_valores" not in st.session_state:
+      if "list_valores" not in st.session_state:
             st.session_state.list_valores = []
 
     
