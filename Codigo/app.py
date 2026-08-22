@@ -32,7 +32,7 @@ if modulos == "Home":
     - Pandas
     - GitHub
     """)
-elif modulos == "1":
+elif modulos == "Ejercicio 1":
   st.write("FLUJO DE CAJA CON LISTAS")
   cantidad_elementos = st.slider("Selecione la cantidad de elementos de su arreglo", 1,100)
   cantidad_arreglo= np.arange(cantidad_elementos)
