@@ -36,9 +36,15 @@ if modulos == "Home":
 elif modulos == "Ejercicio 1":
       st.write("1. FLUJO DE CAJA CON LISTAS")
     
-      list_conceptos=[]
-      list_tipos=[]
-      list_valores=[] 
+
+        if "list_conceptos" not in st.session_state:
+            st.session_state.list_conceptos = []
+  
+        if "list_tipos" not in st.session_state:
+            st.session_state.list_tipos = []
+            
+        if "list_valores" not in st.session_state:
+            st.session_state.list_valores = []
 
     
       concepto = st.text_input("Ingrese Concepto:")
@@ -47,14 +53,14 @@ elif modulos == "Ejercicio 1":
 
       if st.button("Agregar"):
             
-        list_conceptos.append(concepto)
-        list_tipos.append(tipo)
-        list_valores.append(valor)
+        st.session_state.list_conceptos.append(concepto)
+        st.session_state.list_tipos.append(tipo)
+        st.session_state.list_valores.append(valor)
     
       Movimientos= pd.DataFrame({
-        "Concepto":list_conceptos
-        ,"Tipo":list_tipos
-        ,"Valor":list_valores
+        "Concepto":st.session_state.list_conceptos
+        ,"Tipo":st.session_state.list_tipos
+        ,"Valor":st.session_state.list_valores
       }) 
       st.dataframe(Movimientos)
       ingresos=Movimientos[Movimientos["Tipo"]=="Ingreso"]["Valor"].sum()
