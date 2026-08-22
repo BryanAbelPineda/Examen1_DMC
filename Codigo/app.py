@@ -45,8 +45,8 @@ elif modulos == "Ejercicio 1":
     ,"Valor":[20,30]
   }) 
   st.dataframe(Movimientos)
-  ingresos=Movimientos[Movimientos["Tipo"]=="Ingreso"]["Valor"].sunm()
-  gasto=Movimientos[Movimientos["Tipo"]=="Gasto"]["Valor"].sunm()
+  ingresos=Movimientos[Movimientos["Tipo"]=="Ingreso"]["Valor"].sum()
+  gasto   =Movimientos[Movimientos["Tipo"]=="Gasto"]["Valor"].sum()
 
 
 else:
