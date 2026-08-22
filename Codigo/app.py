@@ -53,7 +53,11 @@ elif modulos == "Ejercicio 1":
   st.write("Ingresos: ",ingresos)
   st.write("Gastos: ",gasto)
   st.write("Saldo: ",saldo)
-  if saldo >=1 : st.write("Caja a favor") else: st.write("Caja en contra")  
+  
+  if saldo >= 1 : 
+      st.write("Caja a favor") 
+  else: 
+      st.write("Caja en contra")  
 
 else:
 
