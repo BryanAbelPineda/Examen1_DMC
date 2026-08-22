@@ -42,11 +42,11 @@ elif modulos == "Ejercicio 1":
   list_conceptos=[]
   list_tipos=[]
   list_valores=[]
-        if st.button("Agregar"):
+  if st.button("Agregar"):
         
-            list_onceptos.append(concepto)
-            list_tipos.append(tipo)
-            list_valores.append(valor)
+    list_onceptos.append(concepto)
+    list_tipos.append(tipo)
+    list_valores.append(valor)
 
   Movimientos= pd.DataFrame({
     "Concepto":list_conceptos
