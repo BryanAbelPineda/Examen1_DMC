@@ -188,19 +188,54 @@ elif modulos == "Ejercicio 3":
     
 elif modulos == "Ejercicio 4":
       
-# Historial
+        class Empleado:
+        
+            def __init__(self, nombre, salario_base, porcentaje_bono=0, porcentaje_descuento=0):
+        
+                self.nombre = nombre
+                self.salario_base = salario_base
+                self.porcentaje_bono = porcentaje_bono
+                self.porcentaje_descuento = porcentaje_descuento
+        
+            def calcular_bono(self):
+                return self.salario_base * (self.porcentaje_bono / 100)
+        
+            def calcular_descuento(self):
+                subtotal = self.salario_base + self.calcular_bono()
+                return subtotal * (self.porcentaje_descuento / 100)
+        
+            def calcular_salario_neto(self):
+                return self.salario_base + self.calcular_bono() - self.calcular_descuento()
+        
+            def resumen(self):
+        
+                return {
+                    "Nombre": self.nombre,
+                    "Salario Base": self.salario_base,
+                    "Bono": round(self.calcular_bono(), 2),
+                    "Descuento": round(self.calcular_descuento(), 2),
+                    "Salario Neto": round(self.calcular_salario_neto(), 2)
+                }
+        
+        
+        # ==========================
+        # SESSION STATE
+        # ==========================
+        
         if "empleados" not in st.session_state:
             st.session_state.empleados = []
         
-        st.title("CRUD Empleados")
         
+        # ==========================
         # CREAR
-        st.subheader("Crear Empleado")
+        # ==========================
+        
+        st.subheader("Registro de Empleados")
         
         nombre = st.text_input("Nombre")
         salario = st.number_input("Salario Base", min_value=0.0)
-        bono = st.number_input("Bono (%)", min_value=0.0, max_value=100.0)
-        descuento = st.number_input("Descuento (%)", min_value=0.0, max_value=100.0)
+        bono = st.number_input("Bono (%)", min_value=0.0)
+        descuento = st.number_input("Descuento (%)", min_value=0.0)
         
         if st.button("Agregar"):
         
@@ -215,43 +250,49 @@ elif modulos == "Ejercicio 4":
                 empleado.resumen()
             )
         
+        
+        # ==========================
         # LEER
-        st.subheader("Listado")
+        # ==========================
         
         df = pd.DataFrame(st.session_state.empleados)
         
-        if not df.empty:
-            st.dataframe(df)
+        st.dataframe(df)
         
+        
+        # ==========================
         # ACTUALIZAR
+        # ==========================
+        
         if len(st.session_state.empleados) > 0:
         
-            st.subheader("Actualizar")
-        
             indice = st.selectbox(
-                "Seleccione empleado",
+                "Empleado a actualizar",
                 range(len(st.session_state.empleados))
             )
         
             nuevo_nombre = st.text_input(
-                "Nuevo nombre",
-                value=st.session_state.empleados[indice]["nombre"]
+                "Nuevo Nombre",
+                value=st.session_state.empleados[indice]["Nombre"]
             )
         
             if st.button("Actualizar"):
         
-                st.session_state.empleados[indice]["nombre"] = nuevo_nombre
+                st.session_state.empleados[indice]["Nombre"] = nuevo_nombre
         
+        
+        # ==========================
         # ELIMINAR
+        # ==========================
+        
         if len(st.session_state.empleados) > 0:
         
-            st.subheader("Eliminar")
-        
             indice_eliminar = st.selectbox(
-                "Registro a eliminar",
-                range(len(st.session_state.empleados))
+                "Empleado a eliminar",
+                range(len(st.session_state.empleados)),
+                key="eliminar"
             )
         
             if st.button("Eliminar"):
-                st.session_state.empleados.pop(indice_eliminar)
         
+                st.session_state.empleados.pop(indice_eliminar)
