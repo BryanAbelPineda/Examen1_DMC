@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import datetime as dt
+from datetime import datetime as dt
 
 st.image("Logos/Python_Logo.png", width = 100)
 st.title("Especialización en Python  for Analytics ")
