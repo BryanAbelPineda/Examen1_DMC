@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from datetime import datetime as dt
+from datetime import datetime
 
 st.image("Logos/Python_Logo.png", width = 100)
 st.title("Especialización en Python  for Analytics ")
@@ -134,7 +134,7 @@ elif modulos == "Ejercicio 3":
       nt=st.number_input("Numero de Trabajadores: ")
 
       st.button("Calcular Productividad")
-      ahora=dt.now()
+      ahora=datetime.now()
       st.metric(label="Productividad por hora",value=ahora)
 
 else:
