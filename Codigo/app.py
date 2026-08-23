@@ -150,8 +150,8 @@ elif modulos == "Ejercicio 3":
             validar_positivo(horas_trabajadas, "horas_trabajadas")
             validar_positivo(numero_trabajadores, "numero_trabajadores")
     
-        productividad_hora = unidades_producidas / horas_trabajadas
-        productividad_trabajador = unidades_producidas / numero_trabajadores
+            productividad_hora = unidades_producidas / horas_trabajadas
+            productividad_trabajador = unidades_producidas / numero_trabajadores
     
       return {
             "productividad_por_hora": round(productividad_hora, 2),
