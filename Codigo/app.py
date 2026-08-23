@@ -153,7 +153,7 @@ elif modulos == "Ejercicio 3":
             productividad_hora = unidades_producidas / horas_trabajadas
             productividad_trabajador = unidades_producidas / numero_trabajadores
     
-      return {
+            return {
             "productividad_por_hora": round(productividad_hora, 2),
             "productividad_por_trabajador": round(productividad_trabajador, 2)
              }
