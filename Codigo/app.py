@@ -128,9 +128,9 @@ elif modulos == "Ejercicio 3":
      
       st.write("3. CALCULADORA DE PRODUCTIVDAD LABORAL")
 
-      up=st.number("Unidades Producidas:")
-      ht=st.number("Horas Trabajadas: ")
-      nt=st.number("Numero de Trabajadores: ")
+      up=st.number_input("Unidades Producidas:")
+      ht=st.number_input("Horas Trabajadas: ")
+      nt=st.number_input("Numero de Trabajadores: ")
 
       st.button("Calcular Productividad")
 
