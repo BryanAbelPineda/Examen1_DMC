@@ -128,14 +128,42 @@ elif modulos == "Ejercicio 2":
 elif modulos == "Ejercicio 3":
      
       st.write("3. CALCULADORA DE PRODUCTIVDAD LABORAL")
+      ## DEFINICIO DE PRIMERA FUNCION
+      def validar_positivo(valor: float, nombre: str, permitir_cero: bool = False) -> None:
+        if permitir_cero:
+            if valor < 0:
+                raise ValueError(f"{nombre} no puede ser negativo.")
+        else:
+            if valor <= 0:
+                raise ValueError(f"{nombre} debe ser mayor que cero.")
+   ############################################################################   
 
       up=st.number_input("Unidades Producidas:")
       ht=st.number_input("Horas Trabajadas: ")
       nt=st.number_input("Numero de Trabajadores: ")
+     ## DEFINICIO DE SEGUNDA FUNCION
+      def calcular_productividad_laboral(unidades_producidas: float, horas_trabajadas: float, numero_trabajadores: int) -> dict:
+        """
+            Calcula productividad por hora y por trabajador.
+            """
+            validar_positivo(unidades_producidas, "unidades_producidas")
+            validar_positivo(horas_trabajadas, "horas_trabajadas")
+            validar_positivo(numero_trabajadores, "numero_trabajadores")
+    
+        productividad_hora = unidades_producidas / horas_trabajadas
+        productividad_trabajador = unidades_producidas / numero_trabajadores
+    
+      return {
+            "productividad_por_hora": round(productividad_hora, 2),
+            "productividad_por_trabajador": round(productividad_trabajador, 2)
+             }
+#################################################################################
 
-      st.button("Calcular Productividad")
+      if st.button("Calcular Productividad"):
+          resultado=calcular_productividad_laboral(up,ht,nt)
+      
       ahora=datetime.now()
-      st.metric(label="Productividad por hora",value=2.3)
+      st.metric(label="Productividad por hora",value=resultado)
       st.write("Hora Actual",ahora)
 
 else:
