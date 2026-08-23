@@ -126,7 +126,7 @@ elif modulos == "Ejercicio 2":
 #################################################################################    EJERCICIO 3   #################################################################################  
 elif modulos == "Ejercicio 3":
      
-      st_.write("3. Calculdora de Productividad Laboral")
+      st.write("3. Calculdora de Productividad Laboral")
 
 else:
 
