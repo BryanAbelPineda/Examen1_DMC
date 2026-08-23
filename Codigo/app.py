@@ -186,7 +186,7 @@ elif modulos == "Ejercicio 3":
       ahora=datetime.now()
       st.write("Hora Actual",ahora)
     
-elif modulos == "Ejercicio 3":
+elif modulos == "Ejercicio 4":
       
 # Historial
         if "empleados" not in st.session_state:
