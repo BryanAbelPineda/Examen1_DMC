@@ -8,7 +8,7 @@ st.sidebar.title("Menú")
 st.write("Proyecto Academico")
 st.sidebar.image("Logos/DMC_logo.png",width = 200)
 modulos = st.sidebar.selectbox ("Secciones", ["Home", "Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"])
-
+#################################################################################    1 HOME   #################################################################################   
 if modulos == "Home":
 
 
@@ -34,6 +34,7 @@ if modulos == "Home":
     - Pandas
     - GitHub
     """)
+    #################################################################################    EJERCICIO 1   #################################################################################   
 elif modulos == "Ejercicio 1":
       st.write("1. FLUJO DE CAJA CON LISTAS")
     
@@ -122,6 +123,11 @@ elif modulos == "Ejercicio 2":
       })
     
       st.dataframe(Consolidado)
+#################################################################################    EJERCICIO 3   #################################################################################  
+elif modulos == "Ejercicio 3":
+     
+      st_.write("3. Calculdora de Productividad Laboral")
+
 else:
 
   
