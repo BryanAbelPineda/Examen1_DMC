@@ -170,6 +170,9 @@ elif modulos == "Ejercicio 3":
          resultado=calcular_productividad_laboral(up,ht,nt)  
          st.metric(label="Productividad por hora",value=resultado["productividad_por_hora"])
          st.metric(label="Productividad por Trabajador",value=resultado["productividad_por_trabajador"])
+         
+         ahora=datetime.now()
+         
          st.session_state.historial.append({
             "Hora": ahora,
             "Unidades": up,
