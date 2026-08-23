@@ -160,10 +160,11 @@ elif modulos == "Ejercicio 3":
 #################################################################################
 
       if st.button("Calcular Productividad"):
-          resultado=calcular_productividad_laboral(up,ht,nt)
+           calcular_productividad_laboral(up,ht,nt)
       
       ahora=datetime.now()
-      st.metric(label="Productividad por hora",value=resultado)
+      st.metric(label="Productividad por hora",value=productividad_hora)
+      st.metric(label="Productividad por Trabajador",value=productividad_trabajador)
       st.write("Hora Actual",ahora)
 
 else:
