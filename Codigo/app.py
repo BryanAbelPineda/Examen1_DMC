@@ -143,7 +143,7 @@ elif modulos == "Ejercicio 3":
       nt=st.number_input("Numero de Trabajadores: ")
      ## DEFINICIO DE SEGUNDA FUNCION
       def calcular_productividad_laboral(unidades_producidas: float, horas_trabajadas: float, numero_trabajadores: int) -> dict:
-        """
+            """
             Calcula productividad por hora y por trabajador.
             """
             validar_positivo(unidades_producidas, "unidades_producidas")
