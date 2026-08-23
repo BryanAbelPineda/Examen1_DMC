@@ -134,7 +134,8 @@ elif modulos == "Ejercicio 3":
       nt=st.number_input("Numero de Trabajadores: ")
 
       st.button("Calcular Productividad")
-      st.metric(label="Productividad por hora",value=dt.now())
+      ahora=dt.now()
+      st.metric(label="Productividad por hora",value=ahora)
 
 else:
 
