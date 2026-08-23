@@ -126,7 +126,13 @@ elif modulos == "Ejercicio 2":
 #################################################################################    EJERCICIO 3   #################################################################################  
 elif modulos == "Ejercicio 3":
      
-      st.write("3. Calculdora de Productividad Laboral")
+      st.write("3. CALCULADORA DE PRODUCTIVDAD LABORAL")
+
+      up=st.number("Unidades Producidas:")
+      ht=st.number("Horas Trabajadas: ")
+      nt=st.number("Numero de Trabajadores: ")
+
+      st.button("Calcular Productividad")
 
 else:
 
