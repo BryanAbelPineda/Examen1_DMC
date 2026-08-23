@@ -128,7 +128,14 @@ elif modulos == "Ejercicio 2":
 elif modulos == "Ejercicio 3":
      
       st.write("3. CALCULADORA DE PRODUCTIVDAD LABORAL")
-      ## DEFINICIO DE PRIMERA FUNCION
+      
+    
+    ####LISTA VACIA#####
+      if "historial" not in st.session_state:
+          st.session_state.historial = []
+     
+    
+    ## DEFINICIO DE PRIMERA FUNCION
       def validar_positivo(valor: float, nombre: str, permitir_cero: bool = False) -> None:
         if permitir_cero:
             if valor < 0:
@@ -163,7 +170,16 @@ elif modulos == "Ejercicio 3":
          resultado=calcular_productividad_laboral(up,ht,nt)  
          st.metric(label="Productividad por hora",value=resultado["productividad_por_hora"])
          st.metric(label="Productividad por Trabajador",value=resultado["productividad_por_trabajador"])
-      
+         st.session_state.historial.append({
+            "Hora": ahora,
+            "Unidades": up,
+            "Horas": ht,
+            "Trabajadores": nt,
+            "Productividad Hora": resultado["productividad_por_hora"],
+            "Productividad Trabajador": resultado["productividad_por_trabajador"]
+            })
+      df = pd.DataFrame(st.session_state.historial)
+      st.dataframe(df)
       ahora=datetime.now()
       st.write("Hora Actual",ahora)
 else:
