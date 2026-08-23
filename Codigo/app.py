@@ -130,7 +130,7 @@ elif modulos == "Ejercicio 3":
       st.write("3. CALCULADORA DE PRODUCTIVDAD LABORAL")
       
     
-    ####LISTA VACIA#####
+    ####DEFINIMOS EL DICCIONARIO VACIO , MEJOR QUE USAR UNA LSITA#####
       if "historial" not in st.session_state:
           st.session_state.historial = []
      
@@ -185,8 +185,73 @@ elif modulos == "Ejercicio 3":
       st.dataframe(df)
       ahora=datetime.now()
       st.write("Hora Actual",ahora)
-else:
-
-
-  st.write("No hay nada")
-
+    
+elif modulos == "Ejercicio 3":
+      
+# Historial
+        if "empleados" not in st.session_state:
+            st.session_state.empleados = []
+        
+        st.title("CRUD Empleados")
+        
+        # CREAR
+        st.subheader("Crear Empleado")
+        
+        nombre = st.text_input("Nombre")
+        salario = st.number_input("Salario Base", min_value=0.0)
+        bono = st.number_input("Bono (%)", min_value=0.0, max_value=100.0)
+        descuento = st.number_input("Descuento (%)", min_value=0.0, max_value=100.0)
+        
+        if st.button("Agregar"):
+        
+            empleado = Empleado(
+                nombre,
+                salario,
+                bono,
+                descuento
+            )
+        
+            st.session_state.empleados.append(
+                empleado.resumen()
+            )
+        
+        # LEER
+        st.subheader("Listado")
+        
+        df = pd.DataFrame(st.session_state.empleados)
+        
+        if not df.empty:
+            st.dataframe(df)
+        
+        # ACTUALIZAR
+        if len(st.session_state.empleados) > 0:
+        
+            st.subheader("Actualizar")
+        
+            indice = st.selectbox(
+                "Seleccione empleado",
+                range(len(st.session_state.empleados))
+            )
+        
+            nuevo_nombre = st.text_input(
+                "Nuevo nombre",
+                value=st.session_state.empleados[indice]["nombre"]
+            )
+        
+            if st.button("Actualizar"):
+        
+                st.session_state.empleados[indice]["nombre"] = nuevo_nombre
+        
+        # ELIMINAR
+        if len(st.session_state.empleados) > 0:
+        
+            st.subheader("Eliminar")
+        
+            indice_eliminar = st.selectbox(
+                "Registro a eliminar",
+                range(len(st.session_state.empleados))
+            )
+        
+            if st.button("Eliminar"):
+                st.session_state.empleados.pop(indice_eliminar)
+        
